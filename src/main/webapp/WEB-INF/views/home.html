@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+home
+<a th:href="@{/edit}">edit</a>
+<a th:href="@{/dologout}">logout</a>
+<span th:text="${cookieValue.getName()} + ${cookieValue.getValue()}"></span>
+<span th:text="${user.email}"></span>
+<th:block th:if="${user.email} == null ">
+    <a th:href="@{/login}">login</a>
+</th:block>
+</body>
+</html>
